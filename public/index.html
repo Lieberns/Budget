@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devil Budget Lite</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-flare"></div>
+  <main class="app">
+    <header class="hero">
+      <div>
+        <h1>BUDGET</h1>
+        <p class="subtitle">Controle mensal de gastos:</p>
+      </div>
+      <div class="month-box">
+        <label for="mesFiltro">Mês</label>
+        <input type="month" id="mesFiltro" />
+      </div>
+    </header>
+
+    <section class="dashboard">
+      <article class="card total-card">
+        <span>Total do mês</span>
+        <strong id="totalMes">R$ 0,00</strong>
+      </article>
+      <article class="card">
+        <span>Maior categoria</span>
+        <strong id="maiorCategoria">—</strong>
+      </article>
+      <article class="card">
+        <span>Registros</span>
+        <strong id="qtdRegistros">0</strong>
+      </article>
+    </section>
+
+    <section class="panel grid-two">
+      <form id="formGasto" class="form-card">
+        <h2>Novo gasto</h2>
+
+        <label>Data</label>
+        <input type="date" id="data" required />
+
+        <label>Categoria</label>
+        <select id="categoria" required>
+          <option value="Aluguel">Aluguel</option>
+          <option value="Comida">Comida</option>
+          <option value="Gasolina">Gasolina</option>
+          <option value="Manutenção">Manutenção</option>
+          <option value="Faculdade">Faculdade</option>
+          <option value="Saúde">Saúde</option>
+          <option value="Lazer">Lazer</option>
+          <option value="Contas">Contas</option>
+          <option value="Outros">Outros</option>
+        </select>
+
+        <label>Descrição</label>
+        <input type="text" id="descricao" placeholder="Ex: Mercado, aluguel, gasolina..." required />
+
+        <label>Valor</label>
+        <input type="number" id="valor" min="0.01" step="0.01" placeholder="0,00" required />
+
+        <label>Observação</label>
+        <textarea id="observacao" rows="4" placeholder="Detalhe opcional: local, motivo, parcela, observação pessoal..."></textarea>
+
+        <button type="submit" class="btn primary">Adicionar gasto</button>
+      </form>
+
+      <aside class="form-card">
+        <h2>Exportação</h2>
+        <p class="hint">Gere um relatório do mês selecionado. Na janela aberta, clique em imprimir e escolha “Salvar como PDF”.</p>
+        <button id="btnPDF" class="btn danger" type="button">Exportar PDF do mês</button>
+        <div class="divider"></div>
+        <h3>Por categoria</h3>
+        <div id="categoriasResumo" class="category-list"></div>
+      </aside>
+    </section>
+
+    <section class="panel">
+      <div class="table-header">
+        <h2>Gastos registrados</h2>
+        <button id="btnLimparFiltro" class="btn ghost" type="button">Mostrar todos</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Categoria</th>
+              <th>Descrição</th>
+              <th>Valor</th>
+              <th>Observação</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaGastos"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

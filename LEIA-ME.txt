@@ -1,0 +1,22 @@
+DEVIL BUDGET LITE
+
+Esta versão não precisa de npm install.
+Ela usa apenas recursos nativos do Node.js, então não trava baixando dependências.
+
+COMO RODAR:
+1. Extraia o ZIP.
+2. Abra o PowerShell dentro da pasta controle-gastos-devil-lite.
+3. Rode:
+
+   npm start
+
+4. Abra no navegador:
+
+   http://localhost:3000
+
+PDF:
+O botão Exportar PDF do mês abre uma página de relatório e chama a impressão do navegador.
+Na janela de impressão, escolha: Salvar como PDF.
+
+DADOS:
+Os gastos ficam salvos no arquivo gastos.json, criado automaticamente na pasta do projeto.
