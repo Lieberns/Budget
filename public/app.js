@@ -137,7 +137,7 @@ btnPDF.addEventListener('click', () => {
     <html lang="pt-BR">
     <head>
       <meta charset="UTF-8">
-      <title>Relatório Devil Budget - ${escapar(mes)}</title>
+      <title>Relatório Budget - ${escapar(mes)}</title>
       <style>
         body { font-family: Arial, sans-serif; margin: 32px; color: #111; }
         h1 { margin-bottom: 4px; }
