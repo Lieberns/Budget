@@ -1,5 +1,5 @@
 {
-  "name": "controle-gastos-devil-lite",
+  "name": "controle-gastos",
   "version": "1.0.0",
   "description": "Controle de gastos mensal em Node.js local, sem dependencias pesadas.",
   "main": "server.js",
