@@ -1,4 +1,20 @@
 [
   {
+    "id": "mpsh6sflm42xsa",
+    "data": "2026-04-30",
+    "categoria": "Aluguel",
+    "descricao": "aaaaaaaaaaa",
+    "valor": 1111,
+    "observacao": "aaa",
+    "criadoEm": "2026-05-30T14:58:11.697Z"
+  },
+  {
+    "id": "mpsh72a110ezbn",
+    "data": "2026-04-02",
+    "categoria": "Comida",
+    "descricao": "1111",
+    "valor": 11,
+    "observacao": "11111",
+    "criadoEm": "2026-05-30T14:58:24.457Z"
   }
 ]
